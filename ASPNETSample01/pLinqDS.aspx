@@ -21,7 +21,7 @@
         <asp:Button ID="btnSearch" runat="server" Text="OK" OnClick="btnSearch_Click" />
         <br />
         <br />
-        <asp:ListView ID="ListView1" runat="server" DataKeyNames="idPessoa" DataSourceID="LinqDataSource1" GroupItemCount="3" InsertItemPosition="LastItem">
+        <asp:ListView ID="ListView1" runat="server" DataKeyNames="idPessoa" DataSourceID="LinqDataSource1" GroupItemCount="3">
             <AlternatingItemTemplate>
                 <td runat="server" style="background-color:#FFF8DC;">idPessoa:
                     <asp:Label ID="idPessoaLabel" runat="server" Text='<%# Eval("idPessoa") %>' />
@@ -30,10 +30,10 @@
                     <br />telefone:
                     <asp:Label ID="telefoneLabel" runat="server" Text='<%# Eval("telefone") %>' />
                     <br />
-                    <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
+                    obs:
+                    <asp:Label ID="obsLabel" runat="server" Text='<%# Eval("obs") %>' />
                     <br />
-                    <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />
-                    <br /></td>
+                    </td>
             </AlternatingItemTemplate>
             <EditItemTemplate>
                 <td runat="server" style="background-color:#008A8C;color: #FFFFFF;">idPessoa:
@@ -42,6 +42,9 @@
                     <asp:TextBox ID="nomeTextBox" runat="server" Text='<%# Bind("nome") %>' />
                     <br />telefone:
                     <asp:TextBox ID="telefoneTextBox" runat="server" Text='<%# Bind("telefone") %>' />
+                    <br />
+                    obs:
+                    <asp:TextBox ID="obsTextBox" runat="server" Text='<%# Bind("obs") %>' />
                     <br />
                     <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
                     <br />
@@ -69,6 +72,9 @@
                     <br />telefone:
                     <asp:TextBox ID="telefoneTextBox" runat="server" Text='<%# Bind("telefone") %>' />
                     <br />
+                    obs:
+                    <asp:TextBox ID="obsTextBox" runat="server" Text='<%# Bind("obs") %>' />
+                    <br />
                     <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
                     <br />
                     <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
@@ -82,10 +88,10 @@
                     <br />telefone:
                     <asp:Label ID="telefoneLabel" runat="server" Text='<%# Eval("telefone") %>' />
                     <br />
-                    <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
+                    obs:
+                    <asp:Label ID="obsLabel" runat="server" Text='<%# Eval("obs") %>' />
                     <br />
-                    <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />
-                    <br /></td>
+                    </td>
             </ItemTemplate>
             <LayoutTemplate>
                 <table runat="server">
@@ -110,10 +116,10 @@
                     <br />telefone:
                     <asp:Label ID="telefoneLabel" runat="server" Text='<%# Eval("telefone") %>' />
                     <br />
-                    <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
+                    obs:
+                    <asp:Label ID="obsLabel" runat="server" Text='<%# Eval("obs") %>' />
                     <br />
-                    <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />
-                    <br /></td>
+                    </td>
             </SelectedItemTemplate>
         </asp:ListView>
     
